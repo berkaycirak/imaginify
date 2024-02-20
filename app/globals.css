@@ -285,7 +285,7 @@
 
   /* MediaUploader Component */
   .media-uploader_cldImage {
-    @apply h-fit min-h-72 w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
+    @apply h-fit  w-full rounded-[10px] border border-dashed bg-purple-100/20 object-cover p-2;
   }
 
   .media-uploader_cta {
