@@ -102,7 +102,7 @@ export const getImageSize = (
 ): number => {
   if (type === "fill") {
     return (
-      aspectRatioOptions[image.aspectRatio as AspectRatioKey]?.[dimension] ||
+      aspectRatioOptions[image?.aspectRatio as AspectRatioKey]?.[dimension] ||
       1000
     );
   }

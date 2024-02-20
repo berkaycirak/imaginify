@@ -35,7 +35,7 @@ const MediaUploader = ({
       title: "Image uploaded successfuly.",
       description: "1 credit was deducted from your account",
       className: "success-toast",
-      duration: 500,
+      duration: 5000,
     });
   };
   const onUploadErrorHandler = (result: any) => {
@@ -43,7 +43,7 @@ const MediaUploader = ({
       title: "Something went wrong while uploading",
       description: "Please try again",
       className: "error-toast",
-      duration: 500,
+      duration: 5000,
     });
   };
   return (
@@ -61,7 +61,7 @@ const MediaUploader = ({
           <h3 className="h3-bold text-dark-600 ">Original</h3>
           {publicId ? (
             <>
-              <div className="cursor-pointer overflow-hidden rounded-[10px]">
+              <div className="cursor-pointer overflow-hidden rounded-[10px] min-h-[18rem]">
                 <CldImage
                   width={getImageSize(type, image, "width")}
                   height={getImageSize(type, image, "height")}
@@ -74,8 +74,11 @@ const MediaUploader = ({
               </div>
             </>
           ) : (
-            <div className="media-uploader_cta" onClick={() => open()}>
-              <div className="media-uploader_cta-image">
+            <div
+              className="media-uploader_cta h-full  min-h-[18rem]"
+              onClick={() => open()}
+            >
+              <div className="media-uploader_cta-image ">
                 <Image
                   src="/assets/icons/add.svg"
                   alt="Add Image"
